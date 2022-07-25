@@ -122,8 +122,10 @@ class ParserHooksHandler implements
 			$renderedMath = $renderer->getHtmlOutput();
 			$renderer->addTrackingCategories( $parser );
 		} else {
+			/* Wiki Valley / Seb / 2022-07-25 TODO réactiver mais trop d’erreurs ponctuellement
 			LoggerFactory::getInstance( 'Math' )->warning(
 				"Rendering failed. Printing error message." );
+			/**/
 			// Set a short parser cache time (10 minutes) after encountering
 			// render issues, but not syntax issues.
 			$parser->getOutput()->updateCacheExpiry( 600 );
